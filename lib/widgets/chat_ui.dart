@@ -81,8 +81,13 @@ class ChatUIState extends State<ChatUI> {
   @override
   Widget build(BuildContext context) {
     return DashChat(
-        inputOptions: InputOptions(trailing: [
-          IconButton(onPressed: _sendMediaMessage, icon: Icon(Icons.image))
+
+        inputOptions: InputOptions(
+
+
+            trailing: [
+          IconButton(onPressed: _sendMediaMessage, icon: Icon(Icons.image,color: Colors.white,)),
+
         ]),
         currentUser: currentUser,
         onSend: _sendMessage,

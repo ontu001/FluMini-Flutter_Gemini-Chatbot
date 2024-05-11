@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/chat_ui.dart';
@@ -8,8 +7,8 @@ class Home extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('FluMini'),
-        centerTitle: true,
+        title: Text('FluMini',),
+        automaticallyImplyLeading: false,
       ),
 
       body: ChatUI(),
