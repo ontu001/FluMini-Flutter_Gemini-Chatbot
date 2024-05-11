@@ -1,8 +1,6 @@
 import 'dart:io';
 import 'dart:typed_data';
-
 import 'package:dash_chat_2/dash_chat_2.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:image_picker/image_picker.dart';
@@ -21,7 +19,7 @@ class ChatUIState extends State<ChatUI> {
       id: '1',
       firstName: 'FluMini',
       profileImage:
-          "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_SS.width-1300.jpg");
+          "asset/logo.png");
 
   void _sendMessage(ChatMessage chatMessage) {
     setState(() {
@@ -84,11 +82,10 @@ class ChatUIState extends State<ChatUI> {
 
         inputOptions: InputOptions(
 
-
-            trailing: [
-          IconButton(onPressed: _sendMediaMessage, icon: Icon(Icons.image,color: Colors.white,)),
-
-        ]),
+leading: [
+  IconButton(onPressed: _sendMediaMessage, icon: Icon(Icons.image,color: Colors.white,)),
+],
+        ),
         currentUser: currentUser,
         onSend: _sendMessage,
         messages: messages);
